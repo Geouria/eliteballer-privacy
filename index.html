@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+!DOCTYPE html>
+<!--
+  HAND-OFF FILE — copy this into the `Geouria/eliteballer-privacy` repo as index.html.
+  Updated for the Appodeal ad stack (AdMob is excluded from the shipping build):
+    - Section 1: now discloses Advertising ID, IP address, and approximate
+      (IP-based) location collected by ad partners; the blanket "we do not
+      collect your location" line is softened accordingly.
+    - Section 2 + 3: "Google AdMob" replaced with "Appodeal" (mediation
+      platform) + link to Appodeal's privacy policy.
+  Firebase / Firestore / GDPR / deletion / contact sections are unchanged.
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -112,7 +122,8 @@
       </p>
       <div class="highlight-box">
         <strong>Guest mode:</strong> If you choose to use the App without creating an account ("Try without an account"),
-        we do not collect any personal data. This policy applies only to registered users.
+        we do not collect any personal data tied to your identity. Note that advertisements may still be shown, and our
+        advertising partners may collect device-level data as described in Sections 1 and 3.
       </div>
     </section>
 
@@ -129,8 +140,18 @@
           <strong>Device and usage data:</strong> basic technical information (such as device type and OS version) collected
           automatically by our third-party services for analytics and ad delivery purposes.
         </li>
+        <li>
+          <strong>Advertising data:</strong> to display ads, our advertising partner (Appodeal) and the ad networks it works
+          with may collect your device's <strong>advertising identifier (Advertising ID)</strong>, <strong>IP address</strong>,
+          and <strong>approximate (IP-based) location</strong>, along with ad-interaction data. This is used to serve and
+          measure ads.
+        </li>
       </ul>
-      <p>We do <strong>not</strong> collect your location, phone number, payment information, or any sensitive personal data.</p>
+      <p>
+        The App itself does <strong>not</strong> request GPS location, your phone number, payment information, or any sensitive
+        personal data. We do not determine your precise location; any location used for advertising is approximate and derived
+        from your IP address by our advertising partners.
+      </p>
     </section>
 
     <section id="how-we-use">
@@ -140,7 +161,7 @@
         <li>Create and manage your user account.</li>
         <li>Provide the core App features, including drill tracking, history, and the community forum.</li>
         <li>Send account-related emails (e.g. email verification and password resets).</li>
-        <li>Display relevant advertisements through Google AdMob.</li>
+        <li>Display advertisements through Appodeal and the ad networks it works with.</li>
         <li>Improve the App's performance and fix issues.</li>
         <li>Comply with legal obligations.</li>
       </ul>
@@ -161,13 +182,16 @@
       Data is stored on Google's servers. See
       <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
 
-      <p><strong>Google AdMob (Google LLC)</strong><br>
-      The App displays banner and interstitial advertisements served by AdMob. AdMob may collect device identifiers and
-      usage data to serve personalised or contextual ads. You can review and adjust your ad preferences via your device
-      settings (Ads &gt; Reset Advertising ID / Opt out of ads personalisation). See
-      <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob Privacy</a>.</p>
+      <p><strong>Appodeal (Appodeal Inc.)</strong><br>
+      The App displays banner, medium-rectangle, and interstitial advertisements through Appodeal, an ad mediation
+      platform that works with multiple ad networks (such as AppLovin, Unity Ads, BidMachine, and others) to serve and
+      measure ads. Appodeal and these partners may collect your device's advertising identifier, IP address, and
+      approximate location to deliver personalised or contextual ads. You can review and adjust your ad preferences via
+      your device settings (Ads &gt; Reset Advertising ID / Opt out of ads personalisation), and via the in-app consent
+      dialog shown to users in the EEA and UK. See
+      <a href="https://www.appodeal.com/privacy-policy/" target="_blank" rel="noopener">Appodeal Privacy Policy</a>.</p>
 
-      <p>Beyond the Google services listed above, we do not share your personal data with any other third parties.</p>
+      <p>Beyond the services listed above, we do not share your personal data with any other third parties.</p>
     </section>
 
     <section id="data-storage">
