@@ -1,14 +1,4 @@
-!DOCTYPE html>
-<!--
-  HAND-OFF FILE — copy this into the `Geouria/eliteballer-privacy` repo as index.html.
-  Updated for the Appodeal ad stack (AdMob is excluded from the shipping build):
-    - Section 1: now discloses Advertising ID, IP address, and approximate
-      (IP-based) location collected by ad partners; the blanket "we do not
-      collect your location" line is softened accordingly.
-    - Section 2 + 3: "Google AdMob" replaced with "Appodeal" (mediation
-      platform) + link to Appodeal's privacy policy.
-  Firebase / Firestore / GDPR / deletion / contact sections are unchanged.
--->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -111,7 +101,7 @@
     <header>
       <h1>Privacy Policy</h1>
       <p><strong>App:</strong> Elite Baller &nbsp;·&nbsp; <strong>Developer:</strong> Torbjörn Lindkvist</p>
-      <p><strong>Effective date:</strong> April 3, 2026</p>
+      <p><strong>Effective date:</strong> August 9, 2026</p>
     </header>
 
     <section id="introduction">
@@ -145,6 +135,13 @@
           with may collect your device's <strong>advertising identifier (Advertising ID)</strong>, <strong>IP address</strong>,
           and <strong>approximate (IP-based) location</strong>, along with ad-interaction data. This is used to serve and
           measure ads.
+        </li>
+        <li>
+          <strong>Video delivery data:</strong> drill demonstration videos are not stored inside the App — they are
+          downloaded from our content delivery network when you press play. Pressing play sends your
+          <strong>IP address</strong> and basic request information (such as device type) to our hosting provider,
+          Cloudflare, so the video can be delivered to you. No video is downloaded, and no request is made, unless you
+          press play.
         </li>
       </ul>
       <p>
@@ -191,6 +188,20 @@
       dialog shown to users in the EEA and UK. See
       <a href="https://www.appodeal.com/privacy-policy/" target="_blank" rel="noopener">Appodeal Privacy Policy</a>.</p>
 
+      <p><strong>Google Analytics for Firebase (Google LLC)</strong><br>
+      We record anonymous technical events — chiefly whether an advertisement loaded, failed, or was displayed — to
+      diagnose ad delivery problems. These events are not tied to your name or email address. See
+      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a>.</p>
+
+      <p><strong>Cloudflare, Inc.</strong><br>
+      Drill demonstration videos are hosted on Cloudflare R2 and delivered through Cloudflare's content delivery
+      network at <a href="https://videoseliteballer.org" target="_blank" rel="noopener">videoseliteballer.org</a>.
+      When you press play on a drill video, Cloudflare receives your IP address and standard request information in
+      order to deliver the file. Cloudflare acts as a hosting and delivery provider on our behalf; it does not use this
+      information to advertise to you, and we do not send it your account details. If you never play a video, no
+      request is made. See
+      <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>.</p>
+
       <p>Beyond the services listed above, we do not share your personal data with any other third parties.</p>
     </section>
 
@@ -209,6 +220,12 @@
         We retain your account data for as long as your account remains active or as needed to provide the App.
         If you delete your account, your personal data will be removed in accordance with the deletion process
         described in Section 7.
+      </p>
+      <p>
+        <strong>Video files on your device:</strong> when you play a drill video, the file is stored temporarily in the
+        App's private storage so that replaying it during the same session does not re-download it. This cache is
+        cleared automatically the next time the App starts, and you can also clear it at any time through your device's
+        app storage settings. It contains only drill videos — no personal data.
       </p>
     </section>
 
@@ -250,7 +267,13 @@
     <section id="data-deletion">
       <h2>7. Account and Data Deletion</h2>
       <p>
-        You may request deletion of your account and all associated personal data at any time by sending an email to
+        <strong>In the App:</strong> you can delete your account and all associated personal data yourself at any time
+        from <strong>Profile &rarr; Delete account</strong>. You will be asked to re-enter your password to confirm.
+        This permanently removes your profile, training history, playlists, and forum posts and comments. It cannot be
+        undone.
+      </p>
+      <p>
+        <strong>By email:</strong> if you cannot access the App, you may instead request deletion by emailing
         <a href="mailto:eliteballerteam@outlook.com">eliteballerteam@outlook.com</a> with the subject line
         <em>"Account Deletion Request"</em> and the email address associated with your account.
       </p>
