@@ -1,4 +1,45 @@
 <!DOCTYPE html>
+<!--
+
+  Revision Sep 12 2026: the remove-ads product became a monthly
+  subscription rather than a one-time purchase. Sections 1, 3 and 7 say so,
+  and section 7 now warns that deleting an Elite Baller account does NOT
+  cancel a subscription, which is the one thing here a user can be actively
+  harmed by not knowing.
+
+  Revision Sep 1 2026, alongside Terms section 9a (purchases):
+    - Section 1: added the purchase and ad-free-week data we now hold, and
+      qualified the "we do not request payment information" paragraph, which
+      was true but read as "we hold no purchase data at all".
+    - Section 3: Apple and Google are now payment processors. The blanket
+      "we share with nobody else" line became inaccurate the moment
+      StoreKit / Play Billing ran, and is the most important fix here.
+    - Section 7: deletion does not refund or remove a purchase, and the
+      ad-free-week record is deliberately retained. Say so rather than
+      implying deletion removes everything.
+
+  Revision Aug 23 2026, alongside the expanded Terms of Use:
+    - Section 3: the Google Analytics paragraph described only our own ad
+      telemetry event. Firebase also auto-collects sessions, screen views, an
+      app-instance ID, device model/OS and IP-based coarse region the moment it
+      initialises. The paragraph now says so.
+
+  Revision Aug 9 2026, for the drill video update (app 1.1.0+44):
+    - Section 1 + 3: discloses Cloudflare, a NEW processor. Drill videos stream
+      from videoseliteballer.org, so playing one sends the user's IP address to
+      Cloudflare. This was the reason for the revision.
+    - Section 3: adds Google Analytics for Firebase, which the app has used for
+      a while (ad load/fill telemetry in AdService) but was never listed here.
+    - Section 4: notes that watched clips are cached on the device for the
+      current session and cleared at next launch.
+    - Section 7: the policy said deletion was by email only. The app has had a
+      one-tap in-app flow (Profile > Delete account) since the App Store 5.1.1(v)
+      work; email is now described as the alternative, not the only route.
+
+  Prior revision (Appodeal ad stack, AdMob excluded from the shipping build):
+    - Section 1: Advertising ID, IP address, approximate IP-based location.
+    - Section 2 + 3: "Google AdMob" replaced with "Appodeal".
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -101,7 +142,7 @@
     <header>
       <h1>Privacy Policy</h1>
       <p><strong>App:</strong> Elite Baller &nbsp;·&nbsp; <strong>Developer:</strong> Torbjörn Lindkvist</p>
-      <p><strong>Effective date:</strong> August 9, 2026</p>
+      <p><strong>Effective date:</strong> September 12, 2026</p>
     </header>
 
     <section id="introduction">
@@ -143,11 +184,20 @@
           Cloudflare, so the video can be delivered to you. No video is downloaded, and no request is made, unless you
           press play.
         </li>
+        <li>
+          <strong>The ad-free week and the No Ads subscription.</strong> If you start the ad-free week, we store a single
+          timestamp against your account recording when it began, so we can tell when it ends and so it can only be
+          claimed once. If you subscribe, that subscription is held by Apple or Google against your store account; on
+          your device we store only a flag saying whether ads are currently off, which is refreshed from the store each
+          time the App starts. We never receive your card details, and we do not hold your billing history or renewal
+          dates. We record anonymous analytics events when the offer is shown, declined, started or subscribed to.
+        </li>
       </ul>
       <p>
         The App itself does <strong>not</strong> request GPS location, your phone number, payment information, or any sensitive
-        personal data. We do not determine your precise location; any location used for advertising is approximate and derived
-        from your IP address by our advertising partners.
+        personal data. Purchases are handled entirely by Apple or Google: <strong>we never see, receive or store your card
+        details</strong>. We do hold the purchase and ad-free-week records described above. We do not determine your precise
+        location; any location used for advertising is approximate and derived from your IP address by our advertising partners.
       </p>
     </section>
 
@@ -189,8 +239,12 @@
       <a href="https://www.appodeal.com/privacy-policy/" target="_blank" rel="noopener">Appodeal Privacy Policy</a>.</p>
 
       <p><strong>Google Analytics for Firebase (Google LLC)</strong><br>
-      We record anonymous technical events — chiefly whether an advertisement loaded, failed, or was displayed — to
-      diagnose ad delivery problems. These events are not tied to your name or email address. See
+      We record our own technical events — chiefly whether an advertisement loaded, failed, or was displayed — to
+      diagnose ad delivery problems. Separately, the Firebase SDK automatically collects a standard set of analytics
+      data whenever the App runs: app opens and session activity, the screens you view, a randomly generated
+      app-instance identifier, your device model and operating system version, and your approximate country or region
+      derived from your IP address. None of this is tied to your name or email address, and we do not use it to
+      identify you. See
       <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a>.</p>
 
       <p><strong>Cloudflare, Inc.</strong><br>
@@ -201,6 +255,14 @@
       information to advertise to you, and we do not send it your account details. If you never play a video, no
       request is made. See
       <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>.</p>
+
+      <p><strong>Apple and Google (payments).</strong>
+      If you subscribe, the transaction is made through the App Store or Google Play, not from us. Apple or Google is the
+      seller: they take the payment, hold your payment details, handle every renewal and cancellation, and tell the App
+      only whether your subscription is currently active. We receive that yes or no and nothing about your card, billing
+      address or payment history. Refunds and cancellations are theirs to process. See
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a> and
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
 
       <p>Beyond the services listed above, we do not share your personal data with any other third parties.</p>
     </section>
@@ -281,6 +343,23 @@
         Upon receiving your request, we will delete your account and personal data (including training history and forum
         content) within a reasonable timeframe. Note that some data may be retained for a short period in backups
         before being permanently removed.
+      </p>
+      <p>
+        <strong>The subscription and the ad-free week are the two exceptions, and we would rather state them plainly than
+        let you assume otherwise.</strong>
+      </p>
+      <p>
+        <strong>Deleting your Elite Baller account does NOT cancel your subscription, and you will keep being billed.</strong>
+        The subscription belongs to your Apple or Google account, not to your Elite Baller account, so we cannot cancel it
+        even if we wanted to. Cancel it in your App Store or Google Play account settings, and do that <em>before</em> or
+        alongside deleting your account. If you delete your account and later sign up again, use
+        <strong>Profile &rarr; Restore purchases</strong> to reconnect a subscription that is still running.
+      </p>
+      <p>
+        Separately, the single timestamp recording that your one ad-free week was used is <strong>retained</strong> after
+        deletion. It is kept on its own, with no name, email or other data attached, for the sole purpose of stopping the
+        free week being claimed over and over by deleting and recreating an account. Everything else described above is
+        deleted.
       </p>
     </section>
 
